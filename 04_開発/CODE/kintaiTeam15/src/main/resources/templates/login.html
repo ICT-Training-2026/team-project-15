@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ログイン</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h2>勤怠管理システム</h2>
+<form th:action="@{/login-auth}" method="POST" th:object="${loginSearchForm}">
+	 <label>社員番号</label>
+	 <input type="text" th:field="*{Id}" required><br>
+	 <label>パスワード </label>
+	 <input type="text" th:field="*{password}" required><br><br>
+	 <div th:if="${msg}">
+		<p th:text="${msg}" class="error"></p><br>
+	 </div>
+	 <input type="submit" value="ログイン" class="btn">
+</form>
+
+</body>
+</html>

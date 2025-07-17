@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>トップ</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+	
+<header>
+  <nav>
+    <a th:href="@{/logout}" id="logout-link">ログアウト</a><br><br>
+	
+  </nav>
+  <p>社員番号：<span th:text="${session.userId}"></span></p>
+  <p>氏名：<span th:text="${session.userName}"></span></p>
+  
+  
+</header>
+
+<!--
+<script>
+document.getElementById('logout-link').addEventListener('click', function(event) {
+  if (!confirm('ログアウトしてもよろしいですか？')) {
+    event.preventDefault();  // キャンセル時はリンク遷移を止める
+  }
+});
+</script>
+-->
+
+<h2>勤怠管理システム</h2>
+
+<br>
+
+<form th:action="@{/regist}" method="GET">
+	<input type="submit" value="勤怠登録" class="btn">
+</form>
+<form th:action="@{/edit}" method="POST">
+	<input type="submit" value="勤怠編集" class="btn">
+</form>
+<form th:action="@{/search}" method="GET">
+	<input type="submit" value="勤怠検索" class="btn">
+</form>
+<form th:action="@{/output}" method="POST">
+	<input type="submit" value="勤怠情報出力" class="btn">
+</form>
+<form th:action="@{/management}" method="POST">
+	<input type="submit" value="社員情報管理" class="btn">
+</form>
+
+</body>
+</html>
