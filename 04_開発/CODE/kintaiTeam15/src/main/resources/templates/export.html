@@ -1,0 +1,15 @@
+<!-- src/main/resources/templates/export.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>外部出力画面</title>
+</head>
+<body>
+    <h1>外部出力</h1>
+    <form th:action="@{/exportExcel}" method="get">
+        <label>月を選択：</label>
+        <input type="month" name="month" required>
+        <button type="submit">Excel出力</button>
+    </form>
+</body>
+</html>

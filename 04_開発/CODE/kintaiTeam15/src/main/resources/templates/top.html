@@ -42,7 +42,7 @@ document.getElementById('logout-link').addEventListener('click', function(event)
 <form th:action="@{/search}" method="GET">
 	<input type="submit" value="勤怠検索" class="btn">
 </form>
-<form th:action="@{/output}" method="POST">
+<form th:action="@{/export}" method="GET">
 	<input type="submit" value="勤怠情報出力" class="btn">
 </form>
 <form th:action="@{/management}" method="POST">
