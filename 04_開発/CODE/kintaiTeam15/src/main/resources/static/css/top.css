@@ -1,0 +1,105 @@
+body {
+  font-family: 'Meiryo', 'Segoe UI', sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー（右上配置用） */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0 30px;
+  margin-top: 20px;
+}
+
+header nav {
+  margin-right: 25px;
+}
+
+#logout-link {
+  color: #1976d2;
+  text-decoration: underline;
+  font-size: 0.95em;
+}
+#logout-link:hover {
+  color: #0d47a1;
+}
+
+.user-info {
+  font-size: 0.98em;
+  color: #222;
+  line-height: 1.5;
+  min-width: 160px;
+}
+
+/* タイトル */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1.3em;
+  letter-spacing: 0.02em;
+}
+
+/* メニュー配置 */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  grid-template-rows: 110px 110px;
+  gap: 32px 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 5ボタン目を中央に */
+.menu-container form:nth-child(4) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.menu-container form:nth-child(5) {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.menu-btn {
+  width: 100%;
+  height: 100%;
+  background: #f9f6ea;
+  border: 2px solid #bdbdbd;
+  border-radius: 18px;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  letter-spacing: 0.08em;
+}
+
+.menu-btn:hover {
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+  border-color: #1976d2;
+  background: #f5eedc;
+}
+
+/* スマホ・タブレット対応 */
+@media (max-width: 900px) {
+  .menu-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 18px;
+  }
+  .menu-btn {
+    width: 90vw;
+    min-width: 0;
+    font-size: 1.2em;
+    height: 60px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 10px;
+  }
+}
