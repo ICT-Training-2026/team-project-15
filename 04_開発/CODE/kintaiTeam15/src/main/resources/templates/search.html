@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>勤怠検索</title>
+  <style>
+    table, th, td { border: 1px solid #888; border-collapse: collapse;}
+    th, td { padding: 4px; text-align: center;}
+    .gray { background: #ccc; }
+    .small { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="small">
+    <a href="#">トップ</a>
+    <span style="float:right;">
+      <a href="#">ログアウト</a>
+      <br>
+      社員番号：<span id="empNo"></span><br>
+      氏名：<span id="empName"></span>
+    </span>
+  </div>
+  <h3 style="text-align:center;">勤怠検索</h3>
+  <form style="text-align:center; margin-bottom: 10px;">
+    日付
+    <input type="date" name="startDate">
+    ～
+    <input type="date" name="endDate">
+    &nbsp;&nbsp;社員番号
+    <span id="empNoInput" class="gray"></span>
+    <button type="submit">検索</button>
+  </form>
+  <table style="width:100%;">
+    <tr>
+      <th>編集</th>
+      <th>日付</th>
+      <th>勤務形態</th>
+      <th>始業時刻</th>
+      <th>終業時刻</th>
+      <th>実労働時間</th>
+      <th>休憩時間</th>
+      <th>累積超過時間</th>
+    </tr>
+    <!-- 空行を7つ -->
+    <tr>
+      <td><button type="button">編集</button></td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td><button type="button">編集</button></td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td><button type="button">編集</button></td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td><button type="button">編集</button></td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td><button type="button">編集</button></td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td><button type="button">編集</button></td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+      <td><button type="button">編集</button></td>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+  </table>
+</body>
+</html>
